@@ -1,0 +1,4 @@
+1)Para crear la carpeta: virtualenv nombrecarpeta
+2)Activar el env: .nombrecarpeta\Scripts\activate
+3) Listar librerias: pip freeze
+4) Desactivas env: deactivate

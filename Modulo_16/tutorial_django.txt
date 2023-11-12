@@ -1,0 +1,53 @@
+Proyecto actual: C:\Users\keiver.rincon\OneDrive - CADENA SA\AXCES\Cursos\Curso_Python\Modulo_16\mi_web>
+    Ejecutar:  .\web\Scripts\activate
+
+Accder a 'src' y 'proyecto'
+    Path: C:\Users\keiver.rincon\OneDrive - CADENA SA\AXCES\Cursos\Curso_Python\Modulo_16\mi_web\src\proyecto
+    Ejecutar:python manage.py runserver
+
+-----------------------------------------------------------------------
+1) Creo un "src" en mi carpeta "mi_web"
+mkdir src
+
+2) Iniciar un proyecto 
+django-admin startproject "nombrecarpeta" 
+
+3) Ingresar a la carpeta de proyecto "nombrecarpeta" 
+
+4) Ejecutar comando pasos:
+    4.1)python manage.py runserver
+    4.2)python manage.py migrate
+
+5) Crear usuario admin
+    5.1) python manage.py createsuperuser
+    usuario:keiver.rincon
+    password: fercho23
+
+6) Crear el proyecto de mi app
+    python manage.py startapp "nombrepp" sugerencia "base"
+
+7) Hay que conocer mi carpeta "proyecto" y "base"
+    7.1)
+    -Ingreso a settings.py en "proyecto"
+    -En INSTALLED_APPS añado 'base.apps.BaseConfig', apps es el .py de base y BaseConfig es la clase de apps.py
+
+    7.2) Integrar las URL
+    -Revisar archivo urls.py de base
+
+8) Para construir tablas se puede hacer en models.py de base
+
+    -Cada clase que se crea hace referencia a una tabla
+    -En models.py de base se debe hacer la migración luego de terminar el proceso con 
+        python manage.py makemigrations
+        Resultado: Se crea la carpeta migrations con un archivo 0001_initial.py
+
+    -Ejecutamos: python manage.py migrate 
+        Resultado: Se migra la base de datos
+
+    -Se ejecutar el servicio con runserver
+
+    -Para visualizar los cambios en admin.py de base se debe importar la libreria y crear los archivos correspondientes
+    
+     
+
+
